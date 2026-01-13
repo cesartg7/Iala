@@ -118,7 +118,27 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 6. Video Control Logic - Removed (now using YouTube embed)
+    // 6. Video Mute/Unmute Control
+    const heroVideo = document.querySelector('.hero-video');
+    const muteBtn = document.getElementById('video-mute-btn');
+    const iconMuted = document.getElementById('icon-muted');
+    const iconUnmuted = document.getElementById('icon-unmuted');
+
+    if (heroVideo && muteBtn) {
+        muteBtn.addEventListener('click', () => {
+            heroVideo.muted = !heroVideo.muted;
+
+            if (heroVideo.muted) {
+                iconMuted.style.display = 'block';
+                iconUnmuted.style.display = 'none';
+                muteBtn.setAttribute('aria-label', 'Activar sonido');
+            } else {
+                iconMuted.style.display = 'none';
+                iconUnmuted.style.display = 'block';
+                muteBtn.setAttribute('aria-label', 'Silenciar');
+            }
+        });
+    }
 
     // 7. Enhanced Lightbox with zoom animation
     const lightbox = document.getElementById('lightbox');

@@ -17,18 +17,12 @@
 
 <body>
     <header class="hero">
-        <video autoplay loop playsinline class="hero-video">
-            <source src="videos/cover.mp4" type="video/mp4">
-            Tu navegador no soporta video HTML5.
-        </video>
-        <button id="video-control" class="video-control" aria-label="Activar sonido">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M11 5L6 9H2v6h4l5 4V5z"></path>
-                <line x1="23" y1="9" x2="17" y2="15"></line>
-                <line x1="17" y1="9" x2="23" y2="15"></line>
-            </svg>
-        </button>
+        <iframe class="hero-video"
+            src="https://www.youtube.com/embed/9MEnL_-mYV8?autoplay=1&mute=1&loop=1&playlist=9MEnL_-mYV8&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1&enablejsapi=1"
+            title="Casa Domínguez - Video" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+        </iframe>
         <div class="hero-content">
             <h1>Casa <span>Domínguez</span></h1>
             <p class="subtitle">Alejandro de la Sota (1976)</p>
